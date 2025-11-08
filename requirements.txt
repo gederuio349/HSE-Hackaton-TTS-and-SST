@@ -2,15 +2,11 @@
 numpy==1.22.0
 TTS>=0.20.0
 
-# PyTorch (для GPU используйте версию с CUDA)
-# Важно: PyTorch >= 2.6 изменяет поведение torch.load, что вызывает проблемы с TTS
-# На Windows рекомендуется устанавливать PyTorch и torchaudio
-# Пример для CPU: pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
 
 # Пример для CUDA 12.1: pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu121
 torch>=2.0.0,<2.6.0
 torchaudio>=2.0.0,<2.6.0
-openai‑whisper==20250625
+openai-whisper==20250625
 
 # Аудио обработка
 librosa>=0.10.0
@@ -29,6 +25,5 @@ uvicorn[standard]>=0.23.0
 jinja2>=3.1.2
 python-multipart>=0.0.6
 aiofiles>=23.1.0
-nemo_toolkit[asr]
 
 
