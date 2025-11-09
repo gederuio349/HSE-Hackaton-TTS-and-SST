@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  tts-api:
+    build: .
+    container_name: tts-api
+    ports:
+      - "4010:4010"
+    volumes:
+      # Монтируем директории для сохранения данных между перезапусками
+      - ./uploads:/app/uploads
+      - ./output:/app/output
+      - ./speakers.json:/app/speakers.json
+      - ./events.json:/app/events.json
+      - ./results.json:/app/results.json
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DEVICE=cpu  # Измените на 'cuda' если используете GPU
+    restart: unless-stopped
+

@@ -1,0 +1,48 @@
+# Виртуальное окружение
+ttsvenv/
+venv/
+env/
+.venv/
+
+# Кэш Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Временные файлы и директории (будут созданы в контейнере)
+uploads/*
+output/*
+!uploads/.gitkeep
+!output/.gitkeep
+
+# Логи
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Документация
+*.md
+!ReadMe.md
+
+# Node modules (если есть)
+node_modules/
+package-lock.json
+
+# SSL сертификаты (генерируются автоматически)
+ssl/
+
+# Большие JSON файлы можно исключить, если они не нужны в образе
+# speakers.json
+# events.json
+# results.json
+
